@@ -15,9 +15,7 @@ public class Mercadinho {
     public double calcularTotal() {
         double total = 0.0;
         for (int i = 0; i < quantidade; i++) {
-            if (clientes[i] != null) {
                 total += clientes[i].calcularPagamento();
-            }
         }
         return total; 
     }
@@ -30,10 +28,9 @@ public class Mercadinho {
         System.out.println("===== Relatório de Clientes =====");
         for (int i = 0; i < quantidade; i++) {
             Cliente cliente = clientes[i];
-            if (cliente != null) {
                 System.out.printf("%d) %s \n", i + 1, cliente.toString());
-            }
         }
         System.out.printf("Total geral: %.2f \n", calcularTotal());
     }
+
 }
